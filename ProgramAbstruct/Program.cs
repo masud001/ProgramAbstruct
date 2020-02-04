@@ -2,36 +2,35 @@
 
 namespace ProgramAbstruct
 {
-    public class gfg
+    public abstract class GeeksForGeeks
     {
-        // data members 
-        public string name;
-        public string subject;
+        abstract public void gfg();
+    }
 
-        // public method of base class  
-        public void readers(string name, string subject)
+    public class Geeks1 : GeeksForGeeks
+    {
+        public override void gfg()
         {
-            this.name = name;
-            this.subject = subject;
-            Console.WriteLine("Myself: " + name);
-            Console.WriteLine("My Favorite Subject is: " + subject);
+            Console.WriteLine("Gees 1 clsaa");
         }
     }
 
-
-    public class Geegksforgeegs : gfg
+    public class Geeks2 : GeeksForGeeks
     {
-        public Geegksforgeegs() {
-            Console.WriteLine("Geegksforgeegs");
+        public override void gfg()
+        {
+            Console.WriteLine("Gees 2 clsaa");
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Geegksforgeegs obj = new Geegksforgeegs();
-            obj.readers("Masud", "C#");
+            GeeksForGeeks g;
+            g = new Geeks1();
+            g.gfg();
+            g = new Geeks2();
+            g.gfg();
         }
     }
 }
