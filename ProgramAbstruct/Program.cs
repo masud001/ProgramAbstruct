@@ -2,36 +2,29 @@
 
 namespace ProgramAbstruct
 {
-    public class gfg
-    {
-        // data members 
-        public string name;
-        public string subject;
 
-        // public method of base class  
-        public void readers(string name, string subject)
-        {
-            this.name = name;
-            this.subject = subject;
-            Console.WriteLine("Myself: " + name);
-            Console.WriteLine("My Favorite Subject is: " + subject);
-        }
-    }
-
-
-    public class Geegksforgeegs : gfg
-    {
-        public Geegksforgeegs() {
-            Console.WriteLine("Geegksforgeegs");
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Geegksforgeegs obj = new Geegksforgeegs();
-            obj.readers("Masud", "C#");
+            Console.WriteLine("Bank Account!");
+            CurrentBalance obj = new CurrentBalance();
+            obj.Deposit(500);
+            obj.Balance();
+            obj.Withdraw(1000);
+            
+
         }
     }
 }
+/*
+
+    INHERITENCE
+Bank Account Write a console program in C# program that can perform the 
+basic banking operations such as withdrawal, deposit, checking balance, etc on bank accounts. 
+There are two types of bank account. Savings account provides interest to the customer 
+which is added to balance at the rate of 10%. 
+Whereas Current account does not provide any interest 
+but a current account must have minimum balance of 100000 Taka.
+     
+*/
